@@ -21,18 +21,20 @@ Before running LOHHLA-singlesample, you should install the standard version of L
 The parameter -BAMdir is removed from LOHHLAscript_ss.R. And a new parameter -tumorBAMfile is added. LOHHLAscript_ss.R could be run as follows:  
 
 ```
-Rscript LOHHLAscript_ss.R --HLAexonLoc ${HLAexonfile} \
-				                  --HLAfastaLoc ${HLAfastafile} \
-				                  --novoDir ${novodir} \
-				                  --gatkDir ${gatkdir} \
-				                  --CopyNumLoc ${purityfile} \
-				                  --patientId ${sample} \
-				                  --outputDir ${outdir} \
-				                  --tumorBAMfile ${tumorbamfile} \
-				                  --normalBAMfile ${normalbamfile} \
-				                  --hlaPath ${hlatypefile} \
-				                  --mappingStep TRUE \
-				                  --minCoverageFilter 10 \
-				                  --fishingStep TRUE \
-				                  --cleanUp TRUE
+Rscript LOHHLAscript_ss.R --HLAexonLoc /path/to/HLAexonfile \
+                          --HLAfastaLoc /path/to/HLAfastafile \
+                          --novoDir /path/to/novoDir \
+                          --gatkDir /path/to/gatkDir \
+                          --CopyNumLoc /path/to/purityfile \
+                          --patientId patient \
+                          --outputDir /path/to/outdir \
+                          --tumorBAMfile /path/to/tumorbamfile \
+                          --normalBAMfile /path/to/normalbamfile \
+                          --hlaPath /path/to/hlatypefile \
+                          --mappingStep TRUE \
+                          --minCoverageFilter 10 \
+                          --fishingStep TRUE \
+                          --cleanUp TRUE
 ```
+
+For the explanation of result and other usage of LOHHLA, please refer to the official site.
