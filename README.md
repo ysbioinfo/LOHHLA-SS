@@ -1,5 +1,5 @@
-## LOHHLA-singlesample ##
-A modified version of LOHHLA for single sample analysis.
+## LOHHLA-SS ##
+A modified version of LOHHLA for Single Sample analysis.
 
 The official LOHHLA (https://bitbucket.org/mcgranahanlab/lohhla/src/master/LOHHLAscript.R) is designed for multiregional sampling & sequencing. There are many restrictions in the script that are uncompatible with single sample LOHHLA analysis:  
 1. The name of BAM file must be sample.bam, other ways of naming such as sample.dedupped.bam, sample.sorted.bam will lead to a malformed output name.  
@@ -12,17 +12,17 @@ We modified the LOHHLAscript.R to make it compatible with single sample analysis
 This is not the official distribution site for LOHHLA, just a modification to make LOHHLA compatible with single sample analysis. If you are looking for LOHHLA please go to:  
 https://bitbucket.org/mcgranahanlab/lohhla/src/master/
 
-If you use lohhla-singlesample for your analysis, be sure to cite the original LOHHLA paper:  
+If you use LOHHLA-SS for your analysis, be sure to cite the original LOHHLA paper:  
 McGranahan, N., et al. (2017) Allele-specific HLA loss and immune escape in lung cancer evolution. Cell, 171(6), 1259-1271.
 
 ## Installation ##
-Before running LOHHLA-singlesample, you should install the standard version of LOHHLA following the user guide in https://bitbucket.org/mcgranahanlab/lohhla/src/master/. After successful intallation, replace the LOHHLAscript.R with LOHHLAscript_ss.R.
+Before running LOHHLA-SS, you should install the standard version of LOHHLA following the user guide in https://bitbucket.org/mcgranahanlab/lohhla/src/master/. After successful intallation, replace the LOHHLAscript.R with LOHHLAscript_SS.R.
 
 ## Usage ##
-The parameter -BAMdir is removed from LOHHLAscript_ss.R. And a new parameter -tumorBAMfile is added. LOHHLAscript_ss.R could be run as follows:  
+The parameter -BAMdir is removed from LOHHLAscript_SS.R. And a new parameter -tumorBAMfile is added. LOHHLAscript_SS.R could be run as follows:  
 
 ```
-Rscript LOHHLAscript_ss.R --HLAexonLoc /path/to/HLAexonfile \
+Rscript LOHHLAscript_SS.R --HLAexonLoc /path/to/HLAexonfile \
                           --HLAfastaLoc /path/to/HLAfastafile \
                           --novoDir /path/to/novoDir \
                           --gatkDir /path/to/gatkDir \
