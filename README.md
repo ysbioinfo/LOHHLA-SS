@@ -17,7 +17,11 @@ McGranahan, N., et al. (2017) Allele-specific HLA loss and immune escape in lung
 
 ## Installation ##
 Before running LOHHLA-SS, you should install the standard version of LOHHLA following the user guide in https://bitbucket.org/mcgranahanlab/lohhla/src/master/. After successful intallation, replace the LOHHLAscript.R with LOHHLAscript_SS.R.
-
+Some notes for LOHHLA installation:
+1. please use Novoalign V3 which is free for non-profitable use.
+2. please use samtools 1.xxx, or the pipeline will corrupt.
+3. please also install jellyfish which is not declared in LOHHLA official site
+4. the picard required by LOHHLA is not a single picard command, but an old version of picard, which contains several .jar files.
 ## Usage ##
 The parameter -BAMdir is removed from LOHHLAscript_SS.R. And a new parameter -tumorBAMfile is added. LOHHLAscript_SS.R could be run as follows:  
 
